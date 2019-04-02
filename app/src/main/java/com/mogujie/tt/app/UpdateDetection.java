@@ -126,9 +126,9 @@ public class UpdateDetection {
 
     private void showNoticeDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-        builder.setTitle("软件版本更新");
+        builder.setTitle("Software Update"); //软件版本更新
         builder.setMessage(updateMsg);
-        builder.setPositiveButton("下载", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
@@ -207,9 +207,9 @@ public class UpdateDetection {
                     is.close();
 
             } catch (MalformedURLException e) {
-                e.printStackTrace();
+                //e.printStackTrace(); introducing an empty catch block issue
             } catch(IOException e){
-                e.printStackTrace();
+                // e.printStackTrace(); introducing an empty catch block issue
             }
 
         }
